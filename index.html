@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html react</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #root #counter {
+        max-width: 500px;
+        margin: 25px auto;
+        padding: 2.5%;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 12px 30px;
+        border-radius: 4px;
+        border: 1px solid lightblue;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- react & react dom -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- our custom js -->
+    <script type="text/babel" src="./script.js"></script>
+  </body>
+</html>
