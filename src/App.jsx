@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import './App.css'
+import Clock from './components/Clock'
 
 function App() {
   const [counter, setCounter] = useState(0)
   return (
     <div>
-      <button onClick={() => setCounter(counter+1)}>Count - {counter}</button>
+      <Clock local="en-US" />
     </div>
   )
 }

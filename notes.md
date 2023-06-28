@@ -8,3 +8,6 @@
 - babel will transpile this to valid javascript
 - react automatically calls render method of class component
 - react component will re-render whenever props change
+- state in class component is simply react object
+
+- componentDidMount() runs after component has rendered to the DOM
