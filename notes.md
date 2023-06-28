@@ -1,0 +1,10 @@
+- JSX is syntactic sugar for creating React element
+- we cannot change react element
+- react elements are valid javascript expression
+- react component returns react element
+- one react component returns one single react
+- we can reuse react component
+- component receive properties from outside
+- babel will transpile this to valid javascript
+- react automatically calls render method of class component
+- react component will re-render whenever props change
