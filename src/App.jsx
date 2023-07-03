@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import Clock from './components/Clock'
+import ClockList from './components/ClockList'
+import Form from './components/Form'
 
 function App() {
-  const [counter, setCounter] = useState(0)
+  const lists = [1]
   return (
     <div>
-      <Clock local="en-US" />
+      <ClockList lists={lists} />
+      <hr />
+      <h1>React Forms</h1>
+      <Form />
+
+
     </div>
   )
 }
