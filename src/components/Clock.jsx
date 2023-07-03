@@ -1,19 +1,25 @@
-import React from 'react';
+import React from "react";
 
 class Clock extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      date: new Date()
-    }
+      date: new Date(),
+    };
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        date: new Date(),
-      })
-    }, 1000) 
+    this.clockTimer = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.clockTimer)
+  }
+
+  tick() {
+    this.setState({
+      date: new Date(),
+    });
   }
 
   render() {

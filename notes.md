@@ -11,3 +11,4 @@
 - state in class component is simply react object
 
 - componentDidMount() runs after component has rendered to the DOM
+- componentWillUnmount() runs just before unmounting the component from the DOM
