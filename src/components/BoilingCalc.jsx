@@ -1,50 +1,35 @@
 import React from 'react';
+import { temperatureConverter, toCelsius, toFahrenheit } from '../lib/converter';
+import BoilingVerdict from './BoilingVerdict';
 import TemperatureInput from './TemperatureInput';
 
 export default class BoilingCalc extends React.Component {
 
   state = {
-    celsiusValue: '',
-    fahrenheitValue: ''
+    temperature: '',
+    scale: 'c'
   }
 
-  handleCelsiusChange = (value) => {
-    if(!value) {
-      this.setDefaultState();
-      return;
-    }
+  handleTemperatureChange = (e, scale) => {
     this.setState({
-      celsiusValue: value,
-      fahrenheitValue: (value * 1.8) + 32
-    })
-  }
-
-  handleFahrenHeitValue = (value) => {
-    if(!value) {
-      this.setDefaultState();
-      return;
-    }
-    this.setState({
-      fahrenheitValue: value,
-      celsiusValue: (5/9) * (value - 32)
-    })
-  }
-
-  setDefaultState = () => {
-    this.setState({
-      celsiusValue: '',
-      fahrenheitValue: ''
+      temperature: e.target.value,
+      scale
     })
   }
 
   render() {
-    const {celsiusValue, fahrenheitValue} = this.state
+    const {temperature, scale} = this.state
+
+    const celsius = scale === 'f' ? temperatureConverter(temperature, toCelsius) : temperature;
+    const fahrenheit = scale === 'c' ? temperatureConverter(temperature, toFahrenheit) : temperature;
+
+
     return (
       <>
-        <TemperatureInput scale='c' value={celsiusValue} onChange={this.handleCelsiusChange}/>
+        <TemperatureInput scale='c' value={celsius} onChange={this.handleTemperatureChange}/>
         <br />
-        <TemperatureInput scale='f' value={fahrenheitValue} onChange={this.handleFahrenHeitValue}/>
-        {/* <BoilingVerdict celsius={temperature} /> */}
+        <TemperatureInput scale='f' value={fahrenheit} onChange={this.handleTemperatureChange}/>
+        <BoilingVerdict celsius={celsius} />
       </>
     )
   }
