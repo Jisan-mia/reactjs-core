@@ -1,9 +1,8 @@
 // import ClockList from './components/ClockList'
 // import Form from './components/Form'
 
-import Bracket from "./components/composition/Bracket";
-import Emoji from "./components/composition/Emoji";
-import Text from "./components/composition/Text";
+import FilterableProductTable from "./components/ProductFilter/FilterableProductTable";
+
 
 function App() {
   const lists = [1];
@@ -20,7 +19,7 @@ function App() {
       {/* <Text /> */}
 
       {/* composition */}
-      <Emoji>
+      {/* <Emoji>
         {({ addEmoji }) => (
           <Bracket>
             {({ addBracket }) => (
@@ -28,7 +27,9 @@ function App() {
             )}
           </Bracket>
         )}
-      </Emoji>
+      </Emoji> */}
+
+      <FilterableProductTable />
     </div>
   );
 }
