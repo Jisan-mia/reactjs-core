@@ -1,7 +1,8 @@
 // import ClockList from './components/ClockList'
 // import Form from './components/Form'
 
-import FilterableProductTable from "./components/ProductFilter/FilterableProductTable";
+import HOCExample from "./components/hoc";
+
 
 
 function App() {
@@ -29,7 +30,10 @@ function App() {
         )}
       </Emoji> */}
 
-      <FilterableProductTable />
+      {/* <FilterableProductTable /> */}
+
+
+      <HOCExample />
     </div>
   );
 }

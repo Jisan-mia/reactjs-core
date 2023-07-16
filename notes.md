@@ -12,3 +12,4 @@
 
 - componentDidMount() runs after component has rendered to the DOM
 - componentWillUnmount() runs just before unmounting the component from the DOM
+- A higher order component is a function that takes a component as a parameter and returns a new component
