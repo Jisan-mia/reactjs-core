@@ -1,9 +1,9 @@
 // import ClockList from './components/ClockList'
 // import Form from './components/Form'
 
-import HOCExample from "./components/hoc";
-
-
+import MyClickCounter from "./components/render-props/MyClickCounter";
+import MyCounter from "./components/render-props/MyCounter";
+import MyHoverCounter from "./components/render-props/MyHoverCounter";
 
 function App() {
   const lists = [1];
@@ -32,8 +32,26 @@ function App() {
 
       {/* <FilterableProductTable /> */}
 
+      {/* <HOCExample /> */}
 
-      <HOCExample />
+      {/* render props */}
+      <MyCounter
+        render={(count, handleIncrementCount) => (
+          <MyClickCounter
+            count={count}
+            handleIncrementCount={handleIncrementCount}
+          />
+        )}
+      />
+
+      <MyCounter
+        render={(count, handleIncrementCount) => (
+          <MyHoverCounter
+            count={count}
+            handleIncrementCount={handleIncrementCount}
+          />
+        )}
+      />
     </div>
   );
 }
