@@ -14,3 +14,10 @@
 - componentWillUnmount() runs just before unmounting the component from the DOM
 - A higher order component is a function that takes a component as a parameter and returns a new component
 - render props is a props that defines render logic
+
+- steps of using React Context API
+  1. Create Context (React.createContext()), this gives us 2 component Context.Provider and Context.Consumer
+  2. Wrap parent with context provider (Context.Provider)
+  3. provide a value of the context as prop (<Context.Provider value={{count: 1}} />)
+  4. Wrap child with context consumer (Context.Consumer)
+  5. Consumer follows the render prop pattern (<Context.Consumer> {({count}) => <ClickCounter count={count} /> } </Context.Consumer>)

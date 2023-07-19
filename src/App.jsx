@@ -1,26 +1,38 @@
 // import ClockList from './components/ClockList'
 // import Form from './components/Form'
 
-import MyClickCounter from "./components/render-props/MyClickCounter";
-import MyCounter from "./components/render-props/MyCounter";
-import MyHoverCounter from "./components/render-props/MyHoverCounter";
+import React from "react";
+import Section from "./components/context-api/Section";
+import ThemeContext from "./components/context-api/themeContext";
 
-function App() {
-  const lists = [1];
-  return (
-    <div>
-      {/* <ClockList lists={lists} />
+export default class App extends React.Component {
+  state = {
+    lists: [1],
+    theme: "dark",
+  };
+
+  handleChangeTheme = (newTheme) => {
+    this.setState({
+      theme: newTheme
+    })
+  }
+
+  render() {
+    const {theme} = this.state
+    return (
+      <div>
+        {/* <ClockList lists={this.state.lists} />
       <hr />
       <h1>React Forms</h1>
       <Form /> */}
 
-      {/* <BoilingCalc /> */}
+        {/* <BoilingCalc /> */}
 
-      {/* inheritance */}
-      {/* <Text /> */}
+        {/* inheritance */}
+        {/* <Text /> */}
 
-      {/* composition */}
-      {/* <Emoji>
+        {/* composition */}
+        {/* <Emoji>
         {({ addEmoji }) => (
           <Bracket>
             {({ addBracket }) => (
@@ -30,12 +42,12 @@ function App() {
         )}
       </Emoji> */}
 
-      {/* <FilterableProductTable /> */}
+        {/* <FilterableProductTable /> */}
 
-      {/* <HOCExample /> */}
+        {/* <HOCExample /> */}
 
-      {/* render props */}
-      <MyCounter
+        {/* render props */}
+        {/* <MyCounter
         render={(count, handleIncrementCount) => (
           <MyClickCounter
             count={count}
@@ -51,9 +63,13 @@ function App() {
             handleIncrementCount={handleIncrementCount}
           />
         )}
-      />
-    </div>
-  );
-}
+      /> */}
 
-export default App;
+        {/* context api */}
+        <ThemeContext.Provider value={{theme: theme, handleChangeTheme: this.handleChangeTheme}}>
+          <Section />
+        </ThemeContext.Provider>
+      </div>
+    );
+  }
+}
