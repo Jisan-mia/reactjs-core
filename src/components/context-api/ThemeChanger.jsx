@@ -2,14 +2,12 @@ const ThemeChanger = ({ theme, handleChangeTheme }) => {
   const style =
     theme === "dark" ? { backgroundColor: "#000", color: "#fff" } : null;
 
-  function changeTheme(e) {
-    handleChangeTheme(e.target.id);
-  }
+
   return (
     <div style={{ ...style, padding: "0.5rem" }}>
       <label htmlFor="light">
         <input
-          onChange={changeTheme}
+          onChange={handleChangeTheme}
           type="radio"
           checked={theme === "light"}
           name="theme"
@@ -19,7 +17,7 @@ const ThemeChanger = ({ theme, handleChangeTheme }) => {
       </label>
       <label htmlFor="dark">
         <input
-          onChange={changeTheme}
+          onChange={handleChangeTheme}
           type="radio"
           checked={theme === "dark"}
           name="theme"

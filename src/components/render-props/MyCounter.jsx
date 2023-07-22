@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 
 export default class MyCounter extends React.Component {
   state = {

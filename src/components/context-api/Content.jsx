@@ -1,10 +1,13 @@
+import React from "react";
 import MyCounter from "../render-props/MyCounter";
 import MyHoverCounter from "../render-props/MyHoverCounter";
 import ThemeChanger from "./ThemeChanger";
 import ThemeContext from "./themeContext";
 
-const Content = () => {
-  return (
+export default class Content extends React.Component {
+  render() {
+    const {theme, handleChangeTheme} = this.context
+    return (
     <div>
       <h3>Contents</h3>
 
@@ -22,12 +25,15 @@ const Content = () => {
 
       <div style={{ border: "1px solid lightgrey" }}>
         <h1>Theme Switcher</h1>
-        <ThemeContext.Consumer>
+        {/* render props way */}
+        {/* <ThemeContext.Consumer>
           {({ theme, handleChangeTheme }) => <ThemeChanger theme={theme} handleChangeTheme={handleChangeTheme}/>}
-        </ThemeContext.Consumer>
+        </ThemeContext.Consumer> */}
+
+        <ThemeChanger theme={theme} handleChangeTheme={handleChangeTheme} />
       </div>
     </div>
   );
-};
-
-export default Content;
+  }
+}
+Content.contextType = ThemeContext

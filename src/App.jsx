@@ -11,10 +11,8 @@ export default class App extends React.Component {
     theme: "dark",
   };
 
-  handleChangeTheme = (newTheme) => {
-    this.setState({
-      theme: newTheme
-    })
+  handleChangeTheme = () => {
+    this.setState((prevState) => ({theme: prevState.theme === 'dark' ? 'light' : 'dark'}))
   }
 
   render() {
