@@ -5,7 +5,7 @@ import React from "react";
 import Section from "./components/context-api/Section";
 import ThemeContext from "./components/context-api/themeContext";
 
-export default class App extends React.Component {
+export default class AppClassBased extends React.Component {
   state = {
     lists: [1],
     theme: "dark",
