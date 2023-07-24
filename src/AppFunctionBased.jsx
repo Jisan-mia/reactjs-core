@@ -1,5 +1,5 @@
 import { useState } from "react"
-import TimerFuncComp from "./functional-components/TimerFuncComp"
+import Users from "./functional-components/Users"
 const AppFunctionBased = () => {
   const [show, setShow] = useState(true)
   return (
@@ -8,11 +8,11 @@ const AppFunctionBased = () => {
       <hr />
       <Counter /> */}
       {/* <TimerClassComp /> */}
-      <p><button onClick={(() => setShow(prevState => !prevState))}>show/hide</button></p>
+      {/* <p><button onClick={(() => setShow(prevState => !prevState))}>show/hide</button></p>
       {show ? (
         <TimerFuncComp />
-      ) : 'nothing'}
-      {/* <Users /> */}
+      ) : 'nothing'} */}
+      <Users />
     </>
   )
 }
