@@ -16,8 +16,26 @@
 - render props is a props that defines render logic
 
 - steps of using React Context API
+
   1. Create Context (React.createContext()), this gives us 2 component Context.Provider and Context.Consumer
   2. Wrap parent with context provider (Context.Provider)
   3. provide a value of the context as prop (<Context.Provider value={{count: 1}} />)
   4. Wrap child with context consumer (Context.Consumer)
   5. Consumer follows the render prop pattern (<Context.Consumer> {({count}) => <ClickCounter count={count} /> } </Context.Consumer>)
+
+- core responsibilities or React - Render/rerender ui & react to user input/actions
+  - render jsx codes
+  - manage states and props
+  - react to events/inputs
+  - evaluating state/props change
+- anything other than react core responsibilities is react side effects. examples:
+  - fetching data from an api
+  - updating the dom
+  - setting any subscriptions or timer
+- problems with lifecycle methods of class component
+  - repeating code
+  - unorganized code
+- useEffect
+  - helps us perform side effects in functional component
+  - solves all problems of lifecycle methods in class component
+  - replaces componentDidMount(), componentDidUpdate() & componentWillUnmount()

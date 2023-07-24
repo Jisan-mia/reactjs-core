@@ -1,11 +1,18 @@
-import Todo from "./functional-components/Todo"
-import Counter from './functional-components/Counter'
+import { useState } from "react"
+import TimerFuncComp from "./functional-components/TimerFuncComp"
 const AppFunctionBased = () => {
+  const [show, setShow] = useState(true)
   return (
     <>
-      <Todo />
+      {/* <Todo />
       <hr />
-      <Counter />
+      <Counter /> */}
+      {/* <TimerClassComp /> */}
+      <p><button onClick={(() => setShow(prevState => !prevState))}>show/hide</button></p>
+      {show ? (
+        <TimerFuncComp />
+      ) : 'nothing'}
+      {/* <Users /> */}
     </>
   )
 }
