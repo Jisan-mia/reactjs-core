@@ -10,6 +10,12 @@
 - react component will re-render whenever props change
 - state in class component is simply react object
 
+- what is state?
+
+  - state is nothing but a memory of a component
+  - when a component is live, all variables/state are also live
+  - whenever we changes page x to y, every variables/states of x lost
+
 - componentDidMount() runs after component has rendered to the DOM
 - componentWillUnmount() runs just before unmounting the component from the DOM
 - A higher order component is a function that takes a component as a parameter and returns a new component
@@ -36,6 +42,11 @@
   - repeating code
   - unorganized code
 - useEffect
+
   - helps us perform side effects in functional component
   - solves all problems of lifecycle methods in class component
   - replaces componentDidMount(), componentDidUpdate() & componentWillUnmount()
+
+- useCallback & useMemo helps to optimize performance of react
+  - useCallback hook memoizes the callback function or the reference of the function, only forget previous function and rememoizes if dependency input is changed
+  - useMemo hook memoizes the return value of the callback function not the function itself just return value, and rememoizes if one of the dependency input is changed
