@@ -13,7 +13,7 @@ const reducer = (state, action) => {
 } 
 
 
-const UseReducerCounter = () => {
+const ComplexCounter1 = () => {
   const [count, dispatch] = useReducer(reducer, initialState)
 
 
@@ -26,4 +26,4 @@ const UseReducerCounter = () => {
   )
 }
 
-export default UseReducerCounter
+export default ComplexCounter1

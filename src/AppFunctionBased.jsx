@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ComplexCounter from "./functional-components/useReducer/ComplexCounter"
+import ReducerWithContext from "./functional-components/useReducer/ReducerWithContext"
 const AppFunctionBased = () => {
   const [show, setShow] = useState(true)
   return (
@@ -16,8 +16,10 @@ const AppFunctionBased = () => {
 
       {/* <CounterHome /> */}
       {/* <MyForm /> */}
-      {/* <UseReducerCounter /> */}
-      <ComplexCounter />
+      {/* <ComplexCounter1 /> */}
+      {/* <ComplexCounter2 /> */}
+      {/* <ComplexCounter3 /> */}
+      <ReducerWithContext />
     </>
   )
 }
