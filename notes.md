@@ -48,5 +48,19 @@
   - replaces componentDidMount(), componentDidUpdate() & componentWillUnmount()
 
 - useCallback & useMemo helps to optimize performance of react
+
   - useCallback hook memoizes the callback function or the reference of the function, only forget previous function and rememoizes if dependency input is changed
   - useMemo hook memoizes the return value of the callback function not the function itself just return value, and rememoizes if one of the dependency input is changed
+
+- useReducer hook
+  - this hook is an alternative of useState() hook
+  - useState() has was created based on useReducer() hook
+  - useReducer() hooks takes 2 parameter one is a reducer function, second is initial value
+  - and useReducer() hook returns an array/tuple with stateValue and a dispatch function
+  - with dispatch function we pass the action type/name, and based on the action name reducer updates respective states and render happens in react component
+
+```javascript
+useReducer(reducer, initialState)
+newState = reducer(currentState, action)
+returns a array/tuple = [newState, dispatch]
+```
