@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ReducerWithContext from "./functional-components/useReducer/ReducerWithContext"
+import GetTodos from "./functional-components/useReducer/GetTodos"
 const AppFunctionBased = () => {
   const [show, setShow] = useState(true)
   return (
@@ -19,7 +19,8 @@ const AppFunctionBased = () => {
       {/* <ComplexCounter1 /> */}
       {/* <ComplexCounter2 /> */}
       {/* <ComplexCounter3 /> */}
-      <ReducerWithContext />
+      {/* <ReducerWithContext /> */}
+      <GetTodos />
     </>
   )
 }
