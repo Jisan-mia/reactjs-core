@@ -1,5 +1,5 @@
 import { useState } from "react"
-import GetTodos from "./functional-components/useReducer/GetTodos"
+import WindowSize from "./functional-components/WindowSize"
 const AppFunctionBased = () => {
   const [show, setShow] = useState(true)
   return (
@@ -20,7 +20,8 @@ const AppFunctionBased = () => {
       {/* <ComplexCounter2 /> */}
       {/* <ComplexCounter3 /> */}
       {/* <ReducerWithContext /> */}
-      <GetTodos />
+      {/* <GetTodos /> */}
+      <WindowSize />
     </>
   )
 }
