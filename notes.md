@@ -64,3 +64,9 @@ useReducer(reducer, initialState)
 newState = reducer(currentState, action)
 returns a array/tuple = [newState, dispatch]
 ```
+
+- ways of styling react components
+  - stylesheets (in a separate stylesheet file)
+  - inline styles (inside the jsx)
+  - css module (scopes css)
+  - css in js (styled component)

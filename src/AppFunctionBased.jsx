@@ -1,5 +1,5 @@
 import { useState } from "react"
-import WindowSize from "./functional-components/WindowSize"
+import Newsletter from "./functional-components/styled-components/Newsletter"
 const AppFunctionBased = () => {
   const [show, setShow] = useState(true)
   return (
@@ -21,7 +21,8 @@ const AppFunctionBased = () => {
       {/* <ComplexCounter3 /> */}
       {/* <ReducerWithContext /> */}
       {/* <GetTodos /> */}
-      <WindowSize />
+      {/* <WindowSize /> */}
+      <Newsletter />
     </>
   )
 }
