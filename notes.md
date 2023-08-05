@@ -66,7 +66,7 @@ returns a array/tuple = [newState, dispatch]
 ```
 
 - ways of styling react components
-  - stylesheets (in a separate stylesheet file)
-  - inline styles (inside the jsx)
+  - stylesheets (in a separate stylesheet file, raw css/scss, modular css/scss)
+  - inline styles (inside the jsx, tailwind css)
   - css module (scopes css)
   - css in js (styled component)
